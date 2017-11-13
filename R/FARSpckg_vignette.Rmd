@@ -1,0 +1,43 @@
+---
+title: "FARSpckg -vignette"
+author: "MW"
+date: "November 13, 2017"
+output: html_document
+---
+
+```{r, echo=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# FARSpckg: Read, summarize and plot FARS data
+
+This package lets the user read data from the US National Highway Traffic Safety Administration's Fatality Analysis Reporting System (FARS) saved as a CSV file. In addition several functions to summarize and plot FARS data are included. 
+
+This vignette assumes you have downloaded the FARS data sets (as cvv.bz2) for the years 2013, 2014 and 2015 to your working directory from this [download link](https://d3c33hcgiwev3.cloudfront.net/_e1adac2a5f05192dc8780f3944feec13_fars_data.zip?Expires=1510704000&Signature=YwIRUwFBVVMh1FqVO5TnieqgFhA-tnqm-CYgO6QuW5LxUYeNzwE10yHrJ4-KIsZ0-Ja19TfbdKmwXy9IpAKsLS7PHYVuY5LKhAy1MwBj2~GrP-QiyX~-v89Lv9uQ3M3QEI6l3Ni4UKv9P1lHmW7RtBOWKBkio-qjbbZFwSzR6gg_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A). Otherwise you could also use the *fars_read* function to directly specify a filename.
+
+## Workflow example
+
+Start by loading the FARS data for 2013 and 2014.
+
+```{r, echo=TRUE}
+library(FARSpckg)
+dat <- fars_read_years(2013:2014)
+class(dat)
+```
+
+The result is a list with one entry for each requested year. Each entry looks something like this where is line represents one accident.
+```{r, echo=TRUE}
+dat[[1]]
+```
+
+The above function is used internally for the next function *fars_summarize_years* which summarizes the number of fatal injuries suffered in motor vehicle traffic crashes in each month for each year requested by the user.
+
+```{r, echo=TRUE}
+fars_summarize_years(2013:2014)
+```
+
+Finally, we have the function *fars_map_state* function which displays a basic map of where fatal injuries suffered in motor vehicle traffic crashes occured for a specific year in a specific state.
+
+```{r, echo=TRUE}
+fars_map_state(state.num=5, year=2013)
+```
