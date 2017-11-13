@@ -69,6 +69,7 @@ make_filename <- function(year) {
 #'
 #' @importFrom dplyr mutate
 #' @importFrom dplyr select
+#' @importFrom magrittr %>%
 #'
 #' @examples
 #' # Data needs to be in working directory for this example to work
@@ -107,6 +108,7 @@ fars_read_years <- function(years) {
 #' @importFrom dplyr group_by
 #' @importFrom dplyr summarize
 #' @importFrom tidyr spread
+#' @importFrom magrittr %>%
 #'
 #' @examples
 #' # Data needs to be in working directory for this example to work
