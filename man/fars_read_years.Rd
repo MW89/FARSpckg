@@ -21,9 +21,5 @@ This function reads in multiple FARS data sets for several years.
 The csv files need to be named correctly and need to be saved in the
 working directory. If the i-th entry of the input years is invalid the i-th
 value of the returned list will be NULL and a warning message will be given.
-}
-\examples{
-# Data needs to be in working directory for this example to work
-fars_read_years(2013:2014)
-
+The data (csv.bz2) needs to be in the working directory.
 }

@@ -7,9 +7,9 @@
 fars_map_state(state.num, year)
 }
 \arguments{
-\item{year}{4-digit integer specifying the year}
+\item{state.num}{Integer between 1 and 56 corresponding to the state number}
 
-\item{state_num}{Integer between 1 and 56 corresponding to the state number}
+\item{year}{4-digit integer specifying the year}
 }
 \value{
 None
@@ -21,9 +21,5 @@ vehicle traffic crashes occured for a specific year in a specific state.
 \note{
 An invalid state number or your will result in an error. If no
 accidents occured in the given state and your a message will be printed.
-}
-\examples{
-# Data needs to be in working directory for this example to work
-fars_map_state(12, 2013)
-
+The data (csv.bz2) needs to be in the working directory.
 }

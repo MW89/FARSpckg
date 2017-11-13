@@ -135,7 +135,7 @@ $(document).ready(function () {
 dat &lt;- fars_read_years(2013:2014)
 class(dat)</code></pre>
 <pre><code>## [1] &quot;list&quot;</code></pre>
-<p>The result is a list with one entry for each requested year. Each entry looks something like this</p>
+<p>The result is a list with one entry for each requested year. Each entry looks something like this where is line represents one accident.</p>
 <pre class="r"><code>dat[[1]]</code></pre>
 <pre><code>## # A tibble: 30,202 x 2
 ##    MONTH  year
@@ -151,7 +151,7 @@ class(dat)</code></pre>
 ##  9     1  2013
 ## 10     1  2013
 ## # ... with 30,192 more rows</code></pre>
-<p>The above function is used internally for the next function **. which summarizes the number of fatal injuries suffered in motor vehicle traffic crashes in each month for each year requested by the user.</p>
+<p>The above function is used internally for the next function <em>fars_summarize_years</em> which summarizes the number of fatal injuries suffered in motor vehicle traffic crashes in each month for each year requested by the user.</p>
 <pre class="r"><code>fars_summarize_years(2013:2014)</code></pre>
 <pre><code>## # A tibble: 12 x 3
 ##    MONTH `2013` `2014`

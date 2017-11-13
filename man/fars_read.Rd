@@ -20,10 +20,5 @@ CSV file.
 }
 \note{
 An error is invoced if no valid filename is given.
-}
-\examples{
-# Data needs to be in working directory for this example to work
-fars13 <- fars_read("accident_2013.csv.bz2")
-fars13
-
+The data (csv.bz2) needs to be in the working directory.
 }

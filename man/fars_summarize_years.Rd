@@ -20,10 +20,5 @@ vehicle traffic crashes in each month for each year requested by the user.
 }
 \note{
 Partial input checking is done by invoked functions. If no valid year
-is given as input, an error results.
-}
-\examples{
-# Data needs to be in working directory for this example to work
-fars_summarize_years(c(2013, 2014))
-
+is given as input, an error results. The data (csv.bz2) needs to be in the working directory.
 }
